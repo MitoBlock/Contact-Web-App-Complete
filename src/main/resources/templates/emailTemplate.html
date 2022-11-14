@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration form</title>
+<style>
+h1 {
+	color: blue;
+}
+h2{	
+	color: green;
+}
+table{
+	border-collapse: collapse;
+}
+</style>
+
+</head>
+<body>
+<h1>Contact Information</h1>
+<div class="container">
+
+<h2 th:text="|General ${companyName} Company Information|"></h2>
+<ul>
+  <li th:text="|Name: ${c.companyName}|"></li>
+  <li th:text="|Founder: ${c.founderName}|"></li>
+  <li th:text="|Industry: ${c.industry}|"></li>
+  <li th:text="|Primary Service: ${c.primaryService}|"></li>
+  <li th:text="|Secondary Service: ${c.secondaryService}|"></li>
+  <li th:text="|Address: ${c.address}|"></li>
+  <li th:text="|Email: ${c.companyEmail}|"></li>
+  <li th:text="|Phone Number: ${c.companyPhoneNumber}|"></li>
+</ul>
+
+<h2 th:text="|${contactName} Contact information|"></h2>
+<ul>
+  <li th:text="|Name: ${c.contactName}|"></li>
+  <li th:text="|Title: ${c.contactTitle}|"></li>
+  <li th:text="|Email: ${c.contactEmail}|"></li>
+  <li th:text="|Phone Number: ${c.contactPhoneNumber}|"></li>
+</ul>
+
+<h2 th:text="|${companyName} Stats|"></h2>
+<ul>
+  <li th:text="|Number of Users: ${c.numberOfUsers}|"></li>
+  <li th:text="|Annual Revenue: ${c.revenue}|"></li>
+</ul>
+
+<h2 th:text="|${companyName} Needs And Expectations|"></h2>
+<ul>
+  <li th:text="|Token: ${c.tokenType}|"></li>
+  <li th:text="|Need dev support? ${c.devSupport}|"></li>
+  <li th:text="|New Token? ${c.newToken}|"></li> 
+  <li th:text="|Smart Contract? ${c.smartContract}|"></li>
+</ul>
+
+<p>Use of Service:</p>
+<p th:text="|Use of service: ${c.useOfService}|"></p>
+
+<p>Dev Support details:</p>
+<p th:text="${c.devSupportDesc}"></p>
+
+<p>New Token Suggestion:</p>
+<p th:text="${c.newTokenDesc}"></p>
+
+<p>Smart contract details:</p>
+<p th:text="${c.smartContractDesc}"></p>
+
+<h2 th:text="|${companyName} referral|"></h2>
+
+<p th:text="${c.survey}">survey</p>
+</div>
+</body>
+</html>

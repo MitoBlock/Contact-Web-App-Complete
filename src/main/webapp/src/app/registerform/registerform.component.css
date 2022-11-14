@@ -1,0 +1,38 @@
+
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+/* .form-group{
+	background-color: #512a75;
+	color: white;
+} */
+
+.col-button{
+	 margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.buttonc{
+  height: 200px;
+  position: relative;
+
+}
+
+.fs-4{
+	color: #ff9e44;
+	font-weight: bold;
+}
+
+
+.form-select{
+	font-size: 18px;
+}
+
+.serviceDisplay, .newTokenDisplay, .smartContractDisplay{
+	display: none;
+}

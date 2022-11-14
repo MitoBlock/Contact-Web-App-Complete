@@ -1,0 +1,238 @@
+<div class="col text-center p-4 mb-3">
+    <h1>MITOBLOCK</h1>
+</div>
+
+<!-- (ngSubmit) = "onClickSubmit" -->
+<div class="form-group">
+    <div class="row">
+        <div class="col p-2 mb-3 text-center" style="background-color: #ff9e44;">
+            <span class="fs-2"> Company Registration</span>
+        </div>
+    </div>
+    <span class="fs-4 "> Company Information </span>
+    <div class="row"> 
+        <!-- <div class="col">
+            <span class="fs-4"> Company Information </span>
+        </div> -->
+        <div class="col">
+            <label for="companyName" class="form-label">Company Name</label>
+            <input type="text" class="form-control" id="companyName" [(ngModel)]="companyName">
+        </div>
+        <div class="col">
+            <label for="founderName" class="form-label">Founder Name</label>
+            <input type="text" class="form-control" id="founderName" [(ngModel)]="founderName">
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="industry" class="form-label">Industry</label>
+            <input type="text" class="form-control" id="industry" [(ngModel)]="industry">
+        </div>
+        <div class="col">
+            <label for="primaryService" class="form-label">Primary Service</label>
+            <input type="text" class="form-control" id="primaryService" [(ngModel)]="primaryService">
+        </div>
+        <div class="col">
+            <label for="secondaryService" class="form-label">Secondary Service</label>
+            <input type="text" class="form-control" id="secondaryService" [(ngModel)]="secondaryService">
+        </div>
+        </div>
+        <div class="row">
+        <div class="col">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="address" [(ngModel)]="address">
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="companyEmail" class="form-label">Company Email</label>
+                <input type="email" class="form-control" id="companyEmail" [(ngModel)]="companyEmail">
+            </div>
+                <div class="col">
+                    <label for="companyPhoneNumber" class="form-label">Company Phone Number</label>
+                    <input type="tel" class="form-control" id="companyPhoneNumber" [(ngModel)]="companyPhoneNumber">
+            </div>
+        </div>
+        <span class="fs-4 p-2 "> Contact Information </span>
+        <div class="row">
+                <div class="col">
+                    <label for="contactName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="contactName" [(ngModel)]="contactName">
+                </div>
+                <div class="col">
+                    <label for="contactTitle" class="form-label">Contact Title</label>
+                    <input type="text" class="form-control" id="contactTitle" [(ngModel)]="contactTitle">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="contactEmail" class="form-label">Contact Email</label>
+                    <input type="email" class="form-control" id="contactEmail" [(ngModel)]="contactEmail">
+                </div>
+                <div class="col">
+                    <label for="contactPhoneNumber" class="form-label">Contact Phone Number</label>
+                    <input type="tel" class="form-control" id="contactPhoneNumber" [(ngModel)]="contactPhoneNumber">
+                </div>
+            </div>
+            
+            <span class="fs-4 p-2"> Company Statistics </span>
+            <div class="row">
+                <div class="col">
+                    <label for="numberOfUsers" class="form-label">Number of Users</label>
+                    <input type="number" min="0" class="form-control" id="numberOfUsers" [(ngModel)]="numberOfUsers">
+                </div>
+                <div class="col">
+                	<label for="revenue" class="form-label"> Revenue </label> <br>
+                	<select id="revenue" [(ngModel)]="revenue" class="form-select"> 
+                	<option value="$<10,000"> < $10,000 </option>
+                	<option value="$10,000 - $50,000"> $10,000 - $50,000 </option>
+                	<option value="$50,000 - $100,000"> $50,000 - $100,000 </option>
+                	<option value="> $100000"> > $100,000 </option>
+                	</select>
+                </div>
+            </div>
+            
+            
+            <span class="fs-4 p-2" > How do you want to use our Service? </span>
+            <div class="row">
+            <div class="col-sm-3">
+                	<label for="tokenType" class="form-label"> Token Type </label> <br>
+                	<select id="tokenType" [(ngModel)]="tokenType" class="form-select"> 
+                	<option value="Discount Token"> Discount Token </option>
+                	<option value="Membership Token"> Membership Token </option>
+                	</select>
+                </div>
+                <!-- <div class="col">
+        		<label for="useOfService" class="form-label"> Use of Service </label> <br>
+        		<mat-form-field appearance="fill">
+               
+                    <textarea placeholder="Comment" rows="5" cols="60" [(ngModel)]="useOfService"></textarea>
+                  </mat-form-field>
+               </div> -->
+               </div>
+               <div class="row">
+               <div class="col">
+        		<label for="useOfService" class="form-label"> Use of Service </label> <br>
+        		<mat-form-field appearance="fill">
+                    <textarea placeholder="How do you plan to utilize our service?" rows="5" cols="60" [(ngModel)]="useOfService"></textarea>
+                  </mat-form-field>
+               </div>
+               </div>
+              <!--   <mat-form-field class="example-full-width">
+    			<textarea placeholder="comment" rows="5" cols="60"></textarea>
+  				</mat-form-field> -->
+            
+
+		<div class="row">
+		<div class="col">
+			<label for="devSupport" class="form-label"> Do you need Developer support? </label> <br>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="True" [(ngModel)]="devSupport" (click)="displayDevSupport(1)"> 
+				<label class="form-check-label" for="inlineRadio1">Yes </label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio"
+					name="inlineRadioOptions" id="inlineRadio2" value="False" [(ngModel)]="devSupport" (click)="displayDevSupport(0)"> 
+					<label class="form-check-label" for="inlineRadio2">No </label>
+			</div>
+			<br>
+			<div class="serviceDisplay" id="serviceDisplay">
+			<label for="useOfService" class="form-label"> If so, please explain: </label> <br>
+			<mat-form-field appearance="fill">
+                    <textarea placeholder="What type of developer support?" rows="5" cols="60" [(ngModel)]="useOfService"></textarea>
+            </mat-form-field>
+            </div>
+		</div>
+		</div>
+		
+		<div class="row">
+		<div class="col">
+		<label for="newToken" class="form-label"> Do you you have a suggestion for a new token? </label> <br>
+		<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="True" [(ngModel)]="newToken" (click)="displayNewToken(1)"> 
+				<label class="form-check-label" for="inlineRadio3">Yes </label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio4" value="False" [(ngModel)]="newToken" (click)="displayNewToken(0)"> 
+					<label class="form-check-label" for="inlineRadio4">No </label>
+			</div>
+			<br>
+			<div class="newTokenDisplay" id="newTokenDisplay">
+			<label for="newTokenDesc" class="form-label"> If so, please explain below: </label> <br>
+			<mat-form-field appearance="fill">
+                    <textarea placeholder="What type of token?" rows="5" cols="60" [(ngModel)]="newTokenDesc"></textarea>
+            </mat-form-field>
+            </div>
+		</div>
+		
+		<div class="col">
+		<label for="smartContract" class="form-label"> Are you interested in a smart contract? </label> <br>
+		<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio5" value="True" [(ngModel)]="smartContract" (click)="displaySmartContract(1)"> 
+				<label class="form-check-label" for="inlineRadio5">Yes </label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio6" value="False" [(ngModel)]="smartContract" (click)="displaySmartContract(0)"> 
+				<label class="form-check-label" for="inlineRadio6">No </label>
+			</div>
+			<br>
+			<div class="smartContractDisplay" id="smartContractDisplay">
+			<label for="smartContractDesc" class="form-label"> How do you plan to use a smart contract? </label> <br>
+			<mat-form-field appearance="fill">
+                    <textarea placeholder="Please explain briefly" rows="5" cols="60" [(ngModel)]="smartContractDesc"></textarea>
+            </mat-form-field>
+            </div>
+		</div>
+		</div>
+		
+		<span class="fs-4 p-2" > How did you hear about us?</span>
+		<div class="row">
+		<div class="col-sm-3">
+		<select id="survey" [(ngModel)]="survey" class="form-select" >
+		<option > --Select--</option>
+		<option> Ads </option>
+		<option> Social Media </option>
+		<option> Event </option>
+		<option (click)="selectSurvey()"> Referral </option>
+		</select>
+		</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-3">
+				<label class="form-label">Please list the company name: </label> <input
+					type="text" class="form-control" id="referralName">
+			</div>
+
+			<!-- <mat-radio-group aria-label="Select an option" [(ngModel)]="devSupport">
+                    <mat-radio-button value="True">Yes</mat-radio-button>
+                    <mat-radio-button value="False">No</mat-radio-button>
+                  </mat-radio-group>
+                  
+                  <mat-radio-group aria-label="Select an option">
+  <mat-radio-button value="1">Option 1</mat-radio-button>
+  <mat-radio-button value="2">Option 2</mat-radio-button>
+</mat-radio-group> -->
+
+
+
+
+
+
+
+
+			<div class="buttonc">
+				<div class="col-button">
+					<input class="btn btn-warning btn-lg" type="submit"
+						value="Register" (click)="onCompanyAdd($event)">
+					<!-- <button class="button" type="submit">Register</button> -->
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+
