@@ -3,6 +3,7 @@
 </div>
 
 <!-- (ngSubmit) = "onClickSubmit" -->
+
 <div class="form-group">
     <div class="row">
         <div class="col p-2 mb-3 text-center" style="background-color: #ff9e44;">
@@ -42,6 +43,7 @@
         <div class="col">
             <label for="address" class="form-label">Address</label>
             <input type="text" class="form-control" id="address" [(ngModel)]="address">
+        </div>
         </div>
         <div class="row">
             <div class="col">
@@ -115,7 +117,7 @@
                <div class="col">
         		<label for="useOfService" class="form-label"> Use of Service </label> <br>
         		<mat-form-field appearance="fill">
-                    <textarea placeholder="How do you plan to utilize our service?" rows="5" cols="60" [(ngModel)]="useOfService"></textarea>
+                    <textarea placeholder="How do you plan to utilize our service?" rows="5" cols="155" [(ngModel)]="useOfService"></textarea>
                   </mat-form-field>
                </div>
                </div>
@@ -138,9 +140,9 @@
 			</div>
 			<br>
 			<div class="serviceDisplay" id="serviceDisplay">
-			<label for="useOfService" class="form-label"> If so, please explain: </label> <br>
+			<label for="devSupportDesc" class="form-label"> If so, please explain: </label> <br>
 			<mat-form-field appearance="fill">
-                    <textarea placeholder="What type of developer support?" rows="5" cols="60" [(ngModel)]="useOfService"></textarea>
+                    <textarea placeholder="What type of developer support?" rows="5" cols="155" [(ngModel)]="devSupportDesc"></textarea>
             </mat-form-field>
             </div>
 		</div>
@@ -180,7 +182,7 @@
 			<div class="smartContractDisplay" id="smartContractDisplay">
 			<label for="smartContractDesc" class="form-label"> How do you plan to use a smart contract? </label> <br>
 			<mat-form-field appearance="fill">
-                    <textarea placeholder="Please explain briefly" rows="5" cols="60" [(ngModel)]="smartContractDesc"></textarea>
+                    <textarea placeholder="Please explain briefly" rows="5" cols="73" [(ngModel)]="smartContractDesc"></textarea>
             </mat-form-field>
             </div>
 		</div>
@@ -189,37 +191,22 @@
 		<span class="fs-4 p-2" > How did you hear about us?</span>
 		<div class="row">
 		<div class="col-sm-3">
-		<select id="survey" [(ngModel)]="survey" class="form-select" >
+		<select id="survey" [(ngModel)]="survey" class="form-select" (change)="selectSurvey(survey)">
 		<option > --Select--</option>
 		<option> Ads </option>
 		<option> Social Media </option>
 		<option> Event </option>
-		<option (click)="selectSurvey()"> Referral </option>
+		<option> Referral </option>
 		</select>
 		</div>
 		</div>
 		
-		<div class="row">
+		<div class="row" id="referral">
 			<div class="col-3">
 				<label class="form-label">Please list the company name: </label> <input
 					type="text" class="form-control" id="referralName">
 			</div>
-
-			<!-- <mat-radio-group aria-label="Select an option" [(ngModel)]="devSupport">
-                    <mat-radio-button value="True">Yes</mat-radio-button>
-                    <mat-radio-button value="False">No</mat-radio-button>
-                  </mat-radio-group>
-                  
-                  <mat-radio-group aria-label="Select an option">
-  <mat-radio-button value="1">Option 1</mat-radio-button>
-  <mat-radio-button value="2">Option 2</mat-radio-button>
-</mat-radio-group> -->
-
-
-
-
-
-
+		</div>
 
 
 			<div class="buttonc">
@@ -230,9 +217,5 @@
 				</div>
 			</div>
 
-		</div>
-
-	</div>
-
-
+</div>
 

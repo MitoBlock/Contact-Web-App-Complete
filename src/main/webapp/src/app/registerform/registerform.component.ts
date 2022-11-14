@@ -132,8 +132,13 @@ export class RegisterformComponent implements OnInit {
 		return;
 	}
 	
-	selectSurvey(){
-		alert("Works");
+	selectSurvey(a : string){
+		if(a == 'Referral'){
+			document.getElementById("referral")!.style.display = "block";
+		}
+		else{
+			document.getElementById("referral")!.style.display = "none";
+		}
 	}
 	
 
