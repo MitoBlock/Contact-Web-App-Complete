@@ -22,53 +22,123 @@ table{
 
 <h2 th:text="|General ${companyName} Company Information|"></h2>
 <ul>
-  <li th:text="|Name: ${c.companyName}|"></li>
-  <li th:text="|Founder: ${c.founderName}|"></li>
-  <li th:text="|Industry: ${c.industry}|"></li>
-  <li th:text="|Primary Service: ${c.primaryService}|"></li>
-  <li th:text="|Secondary Service: ${c.secondaryService}|"></li>
-  <li th:text="|Address: ${c.address}|"></li>
-  <li th:text="|Email: ${c.companyEmail}|"></li>
-  <li th:text="|Phone Number: ${c.companyPhoneNumber}|"></li>
+  <li>
+  	<strong>Name: </strong>
+  	<span th:text="${c.companyName}"></span>
+  </li>
+  <li>
+  	<strong>Founder: </strong>
+  	<span th:text="${c.founderName}"></span>
+  </li>
+  <li>
+  	<strong>Industry: </strong>
+  	<span th:text="${c.industry}"></span>
+  </li>
+  <li>
+  	<strong>Primary Service: </strong>
+  	<span th:text="${c.primaryService}"></span>
+  </li>
+  <li>
+  	<strong>Secondary Service: </strong>
+  	<span th:text="${c.secondaryService}"></span>
+  </li>
+  <li>
+  	<strong>Address: </strong>
+  	<span th:text="${c.address}"></span>
+  </li>
+  <li>
+  	<strong>Email: </strong>
+  	<span th:text="${c.companyEmail}"></span>
+  </li>
+  <li>
+  	<strong>Phone Number: </strong>
+  	<span th:text="${c.companyPhoneNumber}"></span>
+  </li>
 </ul>
 
 <h2 th:text="|${contactName} Contact information|"></h2>
 <ul>
-  <li th:text="|Name: ${c.contactName}|"></li>
-  <li th:text="|Title: ${c.contactTitle}|"></li>
-  <li th:text="|Email: ${c.contactEmail}|"></li>
-  <li th:text="|Phone Number: ${c.contactPhoneNumber}|"></li>
+  <li>
+  	<strong>Name: </strong>
+  	<span th:text="${c.contactName}"></span>
+  </li>
+  <li>
+  	<strong>Title: </strong>
+  	<span th:text="${c.contactTitle}"></span>
+  </li>
+  <li>
+  	<strong>Email: </strong>
+  	<span th:text="${c.contactEmail}"></span>
+  </li>
+  <li>
+  	<strong>Phone Number: </strong>
+  	<span th:text="${c.contactPhoneNumber}"></span>
+  </li>
 </ul>
 
 <h2 th:text="|${companyName} Stats|"></h2>
 <ul>
-  <li th:text="|Number of Users: ${c.numberOfUsers}|"></li>
-  <li th:text="|Annual Revenue: ${c.revenue}|"></li>
+  <li>
+  	<strong>Number of Users: </strong>
+  	<span th:text="${c.numberOfUsers}"></span>
+  </li>
+  <li>
+  	<strong>Annual Revenue: </strong>
+  	<span th:text="${c.revenue}"></span>
+  </li>
 </ul>
 
 <h2 th:text="|${companyName} Needs And Expectations|"></h2>
 <ul>
-  <li th:text="|Token: ${c.tokenType}|"></li>
-  <li th:text="|Need dev support? ${c.devSupport}|"></li>
-  <li th:text="|New Token? ${c.newToken}|"></li> 
-  <li th:text="|Smart Contract? ${c.smartContract}|"></li>
+  <li>
+  	<strong>Token type: </strong>
+  	<span th:text="${c.tokenType}"></span>
+  </li>
+  <li>
+  	<strong>Need dev support? </strong>
+  	<span th:text="${c.devSupport}"></span>
+  </li>
+  <li>
+  	<strong>New Token? </strong>
+  	<span th:text="${c.newToken}"></span>
+  </li> 
+  <li>
+  	<strong>Smart Contract? </strong>
+  	<span th:text="${c.smartContract}"></span>
+  </li>
 </ul>
 
-<p>Use of Service:</p>
-<p th:text="|Use of service: ${c.useOfService}|"></p>
+<p>
+	<strong>Use of service: </strong>
+  	<span th:text="${c.useOfService}"></span>
+</p>
 
-<p>Dev Support details:</p>
-<p th:text="${c.devSupportDesc}"></p>
+<p>
+	<strong>Dev Support details: </strong>
+  	<span th:text="${c.devSupportDesc}"></span>
+</p>
 
-<p>New Token Suggestion:</p>
-<p th:text="${c.newTokenDesc}"></p>
+<p>
+	<strong>New Token Suggestion: </strong>
+  	<span th:text="${c.newTokenDesc}"></span>
+</p>
 
-<p>Smart contract details:</p>
-<p th:text="${c.smartContractDesc}"></p>
+<p>
+	<strong>Smart contract details: </strong>
+  	<span th:text="${c.smartContractDesc}"></span>
+</p>
 
 <h2 th:text="|${companyName} referral|"></h2>
-
-<p th:text="${c.survey}">survey</p>
+<ul>
+  <li>
+  	<strong>Survey: </strong>
+  	<span th:text="${c.survey}"></span>
+  </li>
+  <li>
+  	<strong>Referral: </strong>
+  	<span th:text="${c.referral}"></span>
+  </li>
+</ul>
 </div>
 </body>
 </html>

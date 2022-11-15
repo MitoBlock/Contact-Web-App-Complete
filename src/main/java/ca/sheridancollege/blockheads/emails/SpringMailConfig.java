@@ -22,7 +22,7 @@ public class SpringMailConfig {
 		
 		//Connect to that email
 		mailSender.setUsername("lastkyc@gmail.com");
-		mailSender.setPassword("hlqaajtpdltzjtrw");
+		mailSender.setPassword("ynqlkjhhbqlslpsv");
 		
 		//Setup the properties for that connection
 		Properties props = mailSender.getJavaMailProperties();
