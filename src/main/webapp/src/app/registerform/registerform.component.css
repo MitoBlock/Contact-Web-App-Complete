@@ -23,7 +23,7 @@
 
 }
 
-.fs-4{
+.fs-4, .fs-2{
 	color: #ff9e44;
 	font-weight: bold;
 }
@@ -39,4 +39,20 @@
 
 #referral{
 	display: none;
+}
+
+textarea{
+	width: auto;
+}
+
+.header {
+  height: 200px;
+  width: 100%;
+}
+
+.logo-container {
+  width: 150px;
+}
+.logo {
+  max-width: 100%;
 }
