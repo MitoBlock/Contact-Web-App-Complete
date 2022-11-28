@@ -17,7 +17,7 @@ public class RegistrationBootstrap implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-	RegistrationData r1 = new RegistrationData("Little Chef Cooking", "Gordan Ramsey", "Food", "Cooking", "Teaching", "Toronto, Canada", "LC@gmail.com", "905-111-2222", "Michael Smith", "General Manager", "msLC@gmail.com", "905-111-1212", 80, "$10,000 - $50,000", "reward", "To connect with other startups", true, "Need Dev help", true, "Little Chef Token", true, "Need smart contract", "saw through online ad");
+	RegistrationData r1 = new RegistrationData("Little Chef Cooking", "Gordan Ramsey", "Food", "Cooking", "Teaching", "Toronto, Canada", "LC@gmail.com", "905-111-2222", "Michael Smith", "General Manager", "msLC@gmail.com", "905-111-1212", 80, "$10,000 - $50,000", "reward", "To connect with other startups", true, "Need Dev help", true, "Little Chef Token", true, "Need smart contract", "Referral", "Building Blocks Fitness");
 	
 	
 	registrationService.save(r1);

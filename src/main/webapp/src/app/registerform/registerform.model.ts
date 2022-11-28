@@ -26,6 +26,7 @@ export class RegisterForm {
     public smartContractDesc: string;
 
     public survey: string;
+    public referral: string;
 
 
     constructor(
@@ -51,7 +52,8 @@ export class RegisterForm {
         newTokenDesc: string,
         smartContract: boolean,
         smartContractDesc: string,
-        survey: string
+        survey: string,
+        referral: string
     ) {
         this.companyName = companyName
         this.founderName = founderName
@@ -76,5 +78,6 @@ export class RegisterForm {
         this.smartContract = smartContract
         this.smartContractDesc = smartContractDesc
         this.survey = survey
+        this.referral = referral
     }
 }

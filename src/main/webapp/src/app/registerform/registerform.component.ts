@@ -33,6 +33,7 @@ export class RegisterformComponent implements OnInit {
 	smartContract = true;
 	smartContractDesc = '';
 	survey = '';
+	referral = '';
 
 	constructor(private registerformService: RegisterFormService) { }
 
@@ -62,7 +63,7 @@ export class RegisterformComponent implements OnInit {
 		let registration: RegisterForm = new RegisterForm(this.companyName, this.founderName, this.industry, this.primaryService, this.secondaryService,
 			this.address, this.companyEmail, this.companyPhoneNumber, this.contactName, this.contactTitle, this.contactEmail, this.contactPhoneNumber,
 			this.numberOfUsers, this.revenue,
-			this.tokenType, this.useOfService, this.devSupport, this.devSupportDesc, this.newToken, this.newTokenDesc, this.smartContract, this.smartContractDesc, this.survey);
+			this.tokenType, this.useOfService, this.devSupport, this.devSupportDesc, this.newToken, this.newTokenDesc, this.smartContract, this.smartContractDesc, this.survey, this.referral);
 
 
 		this.registerformService.addRegistration(registration).subscribe(
@@ -90,6 +91,7 @@ export class RegisterformComponent implements OnInit {
 				this.smartContract = true;
 				this.smartContractDesc = '';
 				this.survey = '';
+				this.referral = '';
 				this.registerformService.onRegistrationAdded.emit(newRegistration); //emit new registration
 			}
 		)
@@ -132,8 +134,14 @@ export class RegisterformComponent implements OnInit {
 		return;
 	}
 	
-	selectSurvey(){
-		alert("Works");
+	selectSurvey(a : string){
+		if(a == 'Referral'){
+			document.getElementById("referral")!.style.display = "block";
+		}
+		else{
+			document.getElementById("referral")!.style.display = "none";
+			var refInput = (<HTMLInputElement>document.getElementById("referralName")).value = "";
+		}
 	}
 	
 

@@ -1,14 +1,27 @@
-<div class="col text-center p-4 mb-3">
-    <h1>MITOBLOCK</h1>
-</div>
 
-<!-- (ngSubmit) = "onClickSubmit" -->
+<header class="header d-flex justify-content-between align-items-center">
+    <div class="logo-container">
+    <img
+      	class="logo"
+        src="../../assets/images/Mitoblock.png"
+        alt="logo"
+      />
+      </div>
+      
+
+<div class="col text-center" >
+    <h1 style="font-weight: bold; padding-right: 150px;">MITOBLOCK</h1>
+</div>
+</header>
+
+
 <div class="form-group">
     <div class="row">
-        <div class="col p-2 mb-3 text-center" style="background-color: #ff9e44;">
+        <div class="col p-2 mb-3 text-center">
             <span class="fs-2"> Company Registration</span>
         </div>
     </div>
+    <br>
     <span class="fs-4 "> Company Information </span>
     <div class="row"> 
         <!-- <div class="col">
@@ -43,6 +56,7 @@
             <label for="address" class="form-label">Address</label>
             <input type="text" class="form-control" id="address" [(ngModel)]="address">
         </div>
+        </div>
         <div class="row">
             <div class="col">
                 <label for="companyEmail" class="form-label">Company Email</label>
@@ -53,7 +67,8 @@
                     <input type="tel" class="form-control" id="companyPhoneNumber" [(ngModel)]="companyPhoneNumber">
             </div>
         </div>
-        <span class="fs-4 p-2 "> Contact Information </span>
+        <br><br>
+        <span class="fs-4"> Contact Information </span>
         <div class="row">
                 <div class="col">
                     <label for="contactName" class="form-label">Name</label>
@@ -76,7 +91,8 @@
                 </div>
             </div>
             
-            <span class="fs-4 p-2"> Company Statistics </span>
+            <br><br>
+            <span class="fs-4"> Company Statistics </span>
             <div class="row">
                 <div class="col">
                     <label for="numberOfUsers" class="form-label">Number of Users</label>
@@ -93,8 +109,8 @@
                 </div>
             </div>
             
-            
-            <span class="fs-4 p-2" > How do you want to use our Service? </span>
+            <br>
+            <span class="fs-4" > How do you want to use our Service? </span>
             <div class="row">
             <div class="col-sm-3">
                 	<label for="tokenType" class="form-label"> Token Type </label> <br>
@@ -114,9 +130,9 @@
                <div class="row">
                <div class="col">
         		<label for="useOfService" class="form-label"> Use of Service </label> <br>
-        		<mat-form-field appearance="fill">
-                    <textarea placeholder="How do you plan to utilize our service?" rows="5" cols="60" [(ngModel)]="useOfService"></textarea>
-                  </mat-form-field>
+        		
+                    <textarea class="form-control" placeholder="How do you plan to utilize our service?"  [(ngModel)]="useOfService" cols="40"></textarea>
+                  
                </div>
                </div>
               <!--   <mat-form-field class="example-full-width">
@@ -138,10 +154,10 @@
 			</div>
 			<br>
 			<div class="serviceDisplay" id="serviceDisplay">
-			<label for="useOfService" class="form-label"> If so, please explain: </label> <br>
-			<mat-form-field appearance="fill">
-                    <textarea placeholder="What type of developer support?" rows="5" cols="60" [(ngModel)]="useOfService"></textarea>
-            </mat-form-field>
+			<label for="devSupportDesc" class="form-label"> If so, please explain: </label> <br>
+			<div class="form-group">
+                    <textarea class="form-control" placeholder="What type of developer support?" [(ngModel)]="devSupportDesc" cols="50"></textarea>
+            </div>
             </div>
 		</div>
 		</div>
@@ -160,9 +176,9 @@
 			<br>
 			<div class="newTokenDisplay" id="newTokenDisplay">
 			<label for="newTokenDesc" class="form-label"> If so, please explain below: </label> <br>
-			<mat-form-field appearance="fill">
-                    <textarea placeholder="What type of token?" rows="5" cols="60" [(ngModel)]="newTokenDesc"></textarea>
-            </mat-form-field>
+			<div class="form-group">
+                    <textarea class="form-control" placeholder="What type of token?"  [(ngModel)]="newTokenDesc" cols="50"></textarea>
+            </div>
             </div>
 		</div>
 		
@@ -179,60 +195,40 @@
 			<br>
 			<div class="smartContractDisplay" id="smartContractDisplay">
 			<label for="smartContractDesc" class="form-label"> How do you plan to use a smart contract? </label> <br>
-			<mat-form-field appearance="fill">
-                    <textarea placeholder="Please explain briefly" rows="5" cols="60" [(ngModel)]="smartContractDesc"></textarea>
-            </mat-form-field>
+			<div class="form-group">
+                    <textarea class="form-control" placeholder="Please explain briefly"  [(ngModel)]="smartContractDesc" cols="50"></textarea>
+            </div>
             </div>
 		</div>
 		</div>
 		
-		<span class="fs-4 p-2" > How did you hear about us?</span>
+		<br>
+		<span class="fs-4" > How did you hear about us?</span>
 		<div class="row">
 		<div class="col-sm-3">
-		<select id="survey" [(ngModel)]="survey" class="form-select" >
+		<select id="survey" [(ngModel)]="survey" class="form-select" (change)="selectSurvey(survey)">
 		<option > --Select--</option>
 		<option> Ads </option>
 		<option> Social Media </option>
 		<option> Event </option>
-		<option (click)="selectSurvey()"> Referral </option>
+		<option> Referral </option>
 		</select>
 		</div>
 		</div>
 		
-		<div class="row">
+		<div class="row" id="referral">
 			<div class="col-3">
-				<label class="form-label">Please list the company name: </label> <input
-					type="text" class="form-control" id="referralName">
+				<label class="form-label">Please list the company name: </label> 
+				<input type="text" class="form-control" id="referralName" [(ngModel)]="referral" style="width: 300px;">
 			</div>
-
-			<!-- <mat-radio-group aria-label="Select an option" [(ngModel)]="devSupport">
-                    <mat-radio-button value="True">Yes</mat-radio-button>
-                    <mat-radio-button value="False">No</mat-radio-button>
-                  </mat-radio-group>
-                  
-                  <mat-radio-group aria-label="Select an option">
-  <mat-radio-button value="1">Option 1</mat-radio-button>
-  <mat-radio-button value="2">Option 2</mat-radio-button>
-</mat-radio-group> -->
-
-
-
-
-
-
+		</div>
 
 
 			<div class="buttonc">
 				<div class="col-button">
 					<input class="btn btn-warning btn-lg" type="submit"
 						value="Register" (click)="onCompanyAdd($event)">
-					<!-- <button class="button" type="submit">Register</button> -->
 				</div>
 			</div>
 
-		</div>
-
-	</div>
-
-
-
+</div>

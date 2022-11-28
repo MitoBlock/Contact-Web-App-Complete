@@ -42,13 +42,14 @@ public class RegistrationData {
 	private boolean smartContract;
 	private String smartContractDesc;
 	private String survey;
+	public String referral;
 	
 	
 	public RegistrationData(String companyName, String founderName, String industry, String primaryService,
 			String secondaryService, String address, String companyEmail, String companyPhoneNumber, String contactName,
 			String contactTitle, String contactEmail, String contactPhoneNumber, int numberOfUsers, String revenue,
 			String tokenType, String useOfService, boolean devSupport, String devSupportDesc, boolean newToken, String newTokenDesc,
-			boolean smartContract, String smartContractDesc, String survey) {
+			boolean smartContract, String smartContractDesc, String survey, String referral) {
 		super();
 		this.companyName = companyName;
 		this.founderName = founderName;
@@ -73,6 +74,7 @@ public class RegistrationData {
 		this.smartContract = smartContract;
 		this.smartContractDesc = smartContractDesc;
 		this.survey = survey;
+		this.referral = referral;
 	}
 	
 	
