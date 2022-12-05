@@ -21,3 +21,9 @@ Navigate to `http://localhost:4200/` to view the web application.
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Sample Video
+
+![](https://media.giphy.com/media/apspSORFVsfeOeyABi/giphy.gif)
+
+![](https://media.giphy.com/media/6Xe5ao3wcSYE3UPtTR/giphy.gif)
