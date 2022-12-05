@@ -9,7 +9,7 @@ After submitting this form, an email is generated and sent to one of our team me
 ## Technologies
 Angular, Bootstrap, SpringBoot, Typescript, H2 Database 
 
-#Dependencies
+## Dependencies
 Spring data JDBC, Thymeleaf, Lombok, Spring boot web, JPA repository, Spring boot mail
 
 ## Contributors
